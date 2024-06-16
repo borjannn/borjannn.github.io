@@ -1,0 +1,212 @@
+body{
+    font-family: Calibri;
+    background-color: #d5eaff;
+    background-image: url("images/background.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+.maincontainer {
+    margin: auto;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header, footer, .subfooter {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(194, 225, 255, 0.8);
+    justify-content: space-evenly;
+    padding: 1%;
+    align-items: center;
+}
+nav {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav a {
+    text-decoration:none;
+    font-size: 130%;
+    color: #2a2a92;
+    font-weight: bolder;
+}
+nav a:hover {
+    color: #000;
+}
+header div:first-child{
+    font-size: 200%;
+    font-weight: bold;
+    color: #2a2a92;
+}
+.pagemain {
+    margin-top: 2%;
+    background-color: rgba(194, 225, 255, 0.8);
+    width: 100%;
+    display: flex;
+    padding: 1%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-radius: 0.5em;
+}
+#aboutme{
+    width: 60%;
+    text-align: center;
+    font-size: 300%;
+}
+.pagemain p {
+    width: 60%;
+    font-size: 200%;
+    text-align: justify;
+}
+footer{
+    justify-content: space-between;
+    margin-top: 2%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+footer nav {
+    width: 12.5%;
+    margin-right: 2.5%;
+}
+.subfooter{
+    background-color: rgba(194, 225, 255, 0);
+    justify-content: space-between;
+}
+.pagemain h1 {
+    width: 40%;
+    text-align: center;
+}
+.pagemain > ul {
+    width: 46.8%;
+    font-size: 150%;
+    line-height: 1.5;
+    list-style-type: none;
+    margin-bottom: 2%;
+    margin-left: -5%;
+}
+.pagemain ul li span {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+.pagemain > ul > ul > li {
+    list-style-type: none;
+}
+#minigame {
+    width: 100%;
+    padding: 2%;
+}
+#monkey {
+    display: inline-block;
+    position: relative;
+    bottom: -30px;
+    left: 50px;
+    width: 50px;
+    height: 71px;
+}
+#cactus {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    left: 90%;
+    animation: cactus 1s infinite linear;
+}
+.animate {
+    animation: jump 500ms linear;
+}
+@keyframes jump {
+    0%{bottom: 0px;}
+    30%{bottom: 24px;}
+    70%{bottom: 24px;}
+    100%{bottom: 0px}
+}
+@keyframes cactus {
+    0%{left:90%}
+    100%{left:-10px}
+}
+.contact h2 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px black;
+}
+.contact form {
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+.input-box .input-field {
+    width: 45.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background-color: transparent;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 12px 0;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+.field .item::placeholder {
+    color: gray;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form button {
+    justify-self: center;
+    padding: 12px 32px;
+    background-color: rgba(194, 225, 255, 0.8);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px black;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: .50s;
+}
+form .error-text {
+    font-size: 14px;
+    color: red;
+    text-align: left;
+    margin: -5px 0 10px;
+    text-shadow: 0 0 5px black;
+    display: none;
+}
+
+form .textarea-field .error-text{
+    margin-top: -15px;
+}
+.field.error .item {
+    border-color: red;
+    text-shadow: 0 0 5px black;
+}
+.field.error .error-text {
+    display: block;
+}
